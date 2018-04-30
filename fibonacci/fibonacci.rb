@@ -3,7 +3,25 @@ require 'pry-byebug'
 # but you may remove it if you like.
 
 def fibonacci(n)
-  # your code here :)
+  counter = 2
+  if n <= 2
+    1
+  else
+    arr =[1, 1]
+    until counter == n
+      arr << arr[-1] + arr[-2]
+      counter += 1
+    end
+    arr[-1]
+  end
 end
 
+# def fib_nums(arr)
+#
+#   arr << arr[-1] + arr[-2]
+#   # binding.pry
+#   arr
+# end
+
 Pry.start
+ # [1, 1, 2, 3, 5, 8]
