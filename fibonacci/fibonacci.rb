@@ -4,8 +4,10 @@ require 'pry-byebug'
 
 def fibonacci(n)
   counter = 2
-  if n <= 2
+  if n <= 2 && n > 0
     1
+  elsif n < 1
+    "You must provide a positive integer!"
   else
     arr =[1, 1]
     until counter == n
@@ -24,4 +26,4 @@ end
 # end
 
 Pry.start
- # [1, 1, 2, 3, 5, 8]
+ # [1, 1, 2, 3, 5, 8, 13, 21]
